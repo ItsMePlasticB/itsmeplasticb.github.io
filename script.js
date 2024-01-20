@@ -1,7 +1,7 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
     const clientId = 'a596f6c3ebbc41c9a607c2a2a704cfdf';
-    const redirectUri = 'http://localhost:5500/player.html'; // Updated redirect URI
+    const redirectUri = 'https://itsmeplasticb.github.io/player.html'; // Updated redirect URI
     const scopes = ['user-read-currently-playing', 'user-read-private', 'user-read-email']; // Add user-read-email scope for email info
 
     const loginButton = document.getElementById('loginButton');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (code) {
         // Use the authorization code to obtain an access token
-        fetch('http://localhost:3000/token', {
+        fetch('https://itsmeplasticb.github.io/token', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Function to refresh the access token before it expires
             function refreshAccessToken(refreshToken) {
-                const refreshEndpoint = 'http://localhost:3000/refresh';
+                const refreshEndpoint = 'https://itsmeplasticb.github.io/refresh';
 
                 return fetch(refreshEndpoint, {
                     method: 'POST',
